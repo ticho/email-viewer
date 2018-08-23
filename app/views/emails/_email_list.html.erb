@@ -1,4 +1,5 @@
 <div class="email-list">
+  <span>Emails recents</span>
   <ul>
   <% Email.all.sort_by { |email| email.id }.each do |email| %>
     <li id="<%= email.id %>" class="<%=email.read ? "read" : ""%>">

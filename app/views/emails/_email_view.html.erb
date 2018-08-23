@@ -1,6 +1,7 @@
 <div class="email-view">
   <% if !(defined? email) %>
     <span>Cliquez sur un email pour en afficher le contenu</span>
+    <p>Les emails déjà lus sont affichés sur fond jaune</p>
   <% else %>
     <span>Object: <strong id="object"><%= email.object %></strong></span>
     <p id="body"><%= email.body %></p>
