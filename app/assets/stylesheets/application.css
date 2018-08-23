@@ -48,3 +48,8 @@ ul {
 .delete-email {
   background: pink;
 }
+
+#undo {
+  color: red;
+  text-decoration: underline;
+}

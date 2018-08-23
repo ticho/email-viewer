@@ -1,0 +1,11 @@
+$(document).ready(function(){
+  let new_list = $("<%= j (render 'email_list') %>");
+  $('.email-list').replaceWith(new_list);
+  // change the displayed email
+  let new_email = $("<%= j (render 'email_view', email: @email) %>");
+  $('.email-view').replaceWith(new_email);
+  // re add event listener
+  $('div.email-list li').on('click', function(){
+    $.get('/emails/' + this.id)
+  })
+});

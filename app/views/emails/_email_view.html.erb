@@ -1,7 +1,11 @@
 <div class="email-view">
   <% if !(defined? email) %>
     <% if alert == 'deleted-email' %>
-      <p style='background: pink'>Email supprimé</p>
+      <p style='background: pink'>Email supprimé 
+      <% if session[:saved_object] %>
+        <span id='undo'>Undo</span>       
+      <% end %>
+      </p>
     <% end %>
     <span>Cliquez sur un email pour en afficher le contenu</span>
     <p>Les emails déjà lus sont affichés sur fond jaune</p>
