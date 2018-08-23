@@ -1,4 +1,7 @@
 $(document).ready(function(){
+  // change the displayed email
   let new_email = $("<%= j (render 'email_view', email: @email) %>");
   $('.email-view').replaceWith(new_email);
+  // mark the mail as read ?
+  $('#<%=@email.id%>').addClass('read');
 })

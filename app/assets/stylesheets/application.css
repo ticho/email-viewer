@@ -22,3 +22,7 @@ li {
   border: none;
   background: none;
 }
+
+.read {
+  background: yellow;
+}

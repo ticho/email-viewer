@@ -1,4 +1,8 @@
 <div class="email-view">
-  <span>Object: <strong id="object"><%= email.object %></strong></span>
-  <p id="body"><%= email.body %></p>
+  <% if !(defined? email) %>
+    <span>Cliquez sur un email pour en afficher le contenu</span>
+  <% else %>
+    <span>Object: <strong id="object"><%= email.object %></strong></span>
+    <p id="body"><%= email.body %></p>
+  <% end %>
 </div>
