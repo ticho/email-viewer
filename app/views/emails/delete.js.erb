@@ -1,0 +1,6 @@
+$(document).ready(function(){
+  $('#<%=@email_id%>').remove()
+  // show removed email page
+  let new_email = $("<%= j (render 'email_view', alert: 'deleted-email') %>");
+  $('.email-view').replaceWith(new_email);
+})

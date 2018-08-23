@@ -1,9 +1,13 @@
 <div class="email-view">
   <% if !(defined? email) %>
+    <% if alert == 'deleted-email' %>
+      <p style='background: pink'>Email effacé</p>
+    <% end %>
     <span>Cliquez sur un email pour en afficher le contenu</span>
     <p>Les emails déjà lus sont affichés sur fond jaune</p>
   <% else %>
     <span>Object: <strong id="object"><%= email.object %></strong></span>
     <p id="body"><%= email.body %></p>
+    <p class="delete-email" email_id="<%=email.id%>">Supprimer cet email</p>
   <% end %>
 </div>

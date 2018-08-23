@@ -30,4 +30,12 @@ class EmailsController < ApplicationController
       format.js
     end
   end
+
+  def delete
+    @email_id = params[:id]
+    Email.destroy(params[:id])
+    respond_to do |format|
+      format.js
+    end
+  end
 end

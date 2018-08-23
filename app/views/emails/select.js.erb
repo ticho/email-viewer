@@ -4,4 +4,8 @@ $(document).ready(function(){
   $('.email-view').replaceWith(new_email);
   // mark the mail as read ?
   $('#<%=@email.id%>').addClass('read');
+  // add event listener
+  $('p.delete-email').on('click', function(){
+    $.get('/emails/delete/' + this.attributes.email_id.nodeValue)
+  })
 })
