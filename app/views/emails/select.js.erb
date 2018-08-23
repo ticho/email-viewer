@@ -1,0 +1,4 @@
+$(document).ready(function(){
+  let new_email = $("<%= j (render 'email_view', email: @email) %>");
+  $('.email-view').replaceWith(new_email);
+})

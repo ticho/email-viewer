@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+# Jquery install
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 # Seed the db
 gem 'faker'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
