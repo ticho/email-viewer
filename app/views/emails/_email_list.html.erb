@@ -1,7 +1,7 @@
 <div class="email-list">
   <ul>
   <% Email.all.each do |email| %>
-    <li id="<%= email.id %>">
+    <li id="<%= email.id %>" class="<%=email.read ? "read" : ""%>">
       <%= email.object %>
     </li>
   <% end %>
