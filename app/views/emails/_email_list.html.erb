@@ -1,0 +1,7 @@
+<div class="email-list">
+  <ul>
+  <% Email.all.each do |email| %>
+    <li><%= email.object %></li>
+  <% end %>
+  </ul>
+</div>
