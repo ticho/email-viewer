@@ -15,3 +15,10 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+
+$(document).ready(function(){
+  $('li').on('click', function(){
+    $.get('/emails/' + this.id)
+  })
+})

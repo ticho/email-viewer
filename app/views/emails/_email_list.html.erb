@@ -1,11 +1,9 @@
 <div class="email-list">
   <ul>
-  <%= form_with url: select_url do |form| %>
   <% Email.all.each do |email| %>
     <li id="<%= email.id %>">
-      <%= form.submit email.object, class: 'email-item' %>
+      <%= email.object %>
     </li>
-  <% end %>
   <% end %>
   </ul>
 </div>

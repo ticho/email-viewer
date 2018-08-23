@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  post '/emails/select', to: 'emails#select', as: 'select'
+  get 'emails/:id', to: 'emails#select'
   root 'emails#index'
 end

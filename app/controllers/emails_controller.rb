@@ -3,11 +3,8 @@ class EmailsController < ApplicationController
   end
 
   def select
-    p "PARAMS"
-    p params[:id]
-    @email = Email.find_by(object: params[:commit])
+    @email = Email.find(params[:id])
     respond_to do |format|
-      # format.html {redirect_to root_path}
       format.js
     end
   end
