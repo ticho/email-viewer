@@ -18,7 +18,15 @@
 
 
 $(document).ready(function(){
-  $('li').on('click', function(){
+  $('div.email-list li').on('click', function(){
     $.get('/emails/' + this.id)
+  })
+
+  $('li#read-all').on('click', function(){
+    $.get('/emails/read-all')
+  })
+
+  $('li#read-none').on('click', function(){
+    $.get('/emails/read-none')
   })
 })
