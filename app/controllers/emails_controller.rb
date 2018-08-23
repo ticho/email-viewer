@@ -35,6 +35,7 @@ class EmailsController < ApplicationController
     @email_id = params[:id]
     p session[:saved_object] = Email.find(params[:id]).object
     p session[:saved_body] = Email.find(params[:id]).body
+    p session[:saved_id] = Email.find(params[:id]).id
     Email.destroy(params[:id])
     respond_to do |format|
       format.js
@@ -45,10 +46,12 @@ class EmailsController < ApplicationController
     @email = Email.create(
       object: session[:saved_object],
       body: session[:saved_body],
+      id: session[:saved_id],
       read: true
     )
     session[:saved_object] = nil
     session[:saved_body] = nil
+    session[:saved_id] = nil
     respond_to do |format|
       format.js
     end
