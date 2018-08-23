@@ -26,3 +26,11 @@ li {
 .read {
   background: yellow;
 }
+
+.container {
+  display: flex;
+}
+
+.email-view {
+  width: 300px;
+}
